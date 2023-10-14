@@ -1,0 +1,6 @@
+.profile {
+  background-color: var(--secondary-bg-color);
+  box-shadow: 3px 3px 3px 0px var(--secondary-text-color);
+  border-radius: 10px;
+  overflow: hidden;
+}

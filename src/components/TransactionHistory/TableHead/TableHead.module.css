@@ -1,0 +1,13 @@
+.tHead {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--light-text-color);
+
+  background-color: #507ddd;
+}
+
+.tCell {
+  min-width: 200px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}

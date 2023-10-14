@@ -1,0 +1,8 @@
+.transactionHistory {
+  border: 1px solid var(--secondary-text-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 2px 0px var(--secondary-text-color);
+
+  border-spacing: 1px;
+}
