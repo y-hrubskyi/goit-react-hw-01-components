@@ -1,27 +1,33 @@
-// import { TableHead } from 'components/TransactionHistory/TableHead/TableHead';
-// import { TableBody } from 'components/TransactionHistory/TableBody/TableBody';
-import css from './TransactionHistory.module.css';
+import {
+  TBody,
+  TBodyData,
+  TBodyRow,
+  THead,
+  THeadCell,
+  THeadRow,
+  TransactionsTable,
+} from './TransactionHistory.styled';
 
 export function TransactionHistory({ transactions }) {
   const tBodyRows = transactions.map(({ id, type, amount, currency }) => (
-    <tr key={id} className={css.tRow}>
-      <td className={css.tData}>{type}</td>
-      <td className={css.tData}>{amount}</td>
-      <td className={css.tData}>{currency}</td>
-    </tr>
+    <TBodyRow key={id}>
+      <TBodyData>{type}</TBodyData>
+      <TBodyData>{amount}</TBodyData>
+      <TBodyData>{currency}</TBodyData>
+    </TBodyRow>
   ));
 
   return (
-    <table className={css.transactionsTable}>
-      <thead className={css.tHead}>
-        <tr>
-          <th className={css.tHeadCell}>Type</th>
-          <th className={css.tHeadCell}>Amount</th>
-          <th className={css.tHeadCell}>Currency</th>
-        </tr>
-      </thead>
+    <TransactionsTable>
+      <THead>
+        <THeadRow>
+          <THeadCell>Type</THeadCell>
+          <THeadCell>Amount</THeadCell>
+          <THeadCell>Currency</THeadCell>
+        </THeadRow>
+      </THead>
 
-      <tbody>{tBodyRows}</tbody>
-    </table>
+      <TBody>{tBodyRows}</TBody>
+    </TransactionsTable>
   );
 }

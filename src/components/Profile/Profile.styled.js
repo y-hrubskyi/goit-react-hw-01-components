@@ -1,40 +1,45 @@
-.profileWrapper {
+import styled from 'styled-components';
+
+export const ProfileWrapper = styled.div`
   background-color: var(--secondary-bg-color);
   box-shadow: 3px 3px 3px 0px var(--secondary-text-color);
   border-radius: 10px;
   overflow: hidden;
-}
+`;
 
-.description {
+export const Description = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
 
   padding: 20px;
-}
+`;
 
-.avatar {
+export const Avatar = styled.img`
   margin-bottom: 20px;
   border-radius: 50%;
   overflow: hidden;
-}
+`;
 
-.username {
+export const Username = styled.p`
   font-size: 20px;
   font-weight: 500;
-}
+`;
 
-.tag,
-.location {
+export const Tag = styled.p`
   color: var(--secondary-text-color);
-}
+`;
 
-.statsList {
+export const Location = styled.p`
+  color: var(--secondary-text-color);
+`;
+
+export const StatsList = styled.ul`
   display: flex;
-}
+`;
 
-.statsItem {
+export const StatsItem = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,13 +48,13 @@
 
   border: 1px solid #d4d4d4;
   background-color: #e9eaee;
-}
+`;
 
-.label {
+export const Label = styled.span`
   text-transform: capitalize;
   color: var(--secondary-text-color);
-}
+`;
 
-.quantity {
+export const Quantity = styled.span`
   font-weight: 600;
-}
+`;

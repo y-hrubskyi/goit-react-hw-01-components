@@ -4,8 +4,8 @@ import { Statictics } from 'components/Statictics/Statictics';
 import { FriendsList } from 'components/FriendsList/FriendsList';
 import { TransactionHistory } from 'components/TransactionHistory/TransactionHistory';
 
-// styles
-import css from './App.module.css';
+// styled
+import { AppWrapper } from './App.styled';
 
 // data
 import user from 'data/user.json';
@@ -15,7 +15,7 @@ import transactions from 'data/transactions.json';
 
 export const App = () => {
   return (
-    <div className={css.app}>
+    <AppWrapper>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -26,6 +26,6 @@ export const App = () => {
       <Statictics title="Upload Stats" statistics={statistics} />
       <FriendsList friends={friends} />
       <TransactionHistory transactions={transactions} />
-    </div>
+    </AppWrapper>
   );
 };

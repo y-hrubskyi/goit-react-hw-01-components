@@ -1,31 +1,35 @@
-// import { UserInfo } from 'components/Profile/UserInfo/UserInfo';
-// import { UserStats } from 'components/Profile/UserStats/UserStats';
-import css from './Profile.module.css';
+import {
+  Avatar,
+  Description,
+  Label,
+  Location,
+  ProfileWrapper,
+  Quantity,
+  StatsItem,
+  StatsList,
+  Tag,
+  Username,
+} from './Profile.styled';
 
 export function Profile({ username, tag, location, avatar, stats }) {
   const statsEntries = Object.entries(stats);
   const statsList = statsEntries.map(([statType, quantity]) => (
-    <li key={statType} className={css.statsItem}>
-      <span className={css.label}>{statType}</span>
-      <span className={css.quantity}>{quantity}</span>
-    </li>
+    <StatsItem key={statType}>
+      <Label>{statType}</Label>
+      <Quantity>{quantity}</Quantity>
+    </StatsItem>
   ));
 
   return (
-    <div className={css.profileWrapper}>
-      <div className={css.description}>
-        <img
-          src={avatar}
-          alt={username + ' avatar'}
-          className={css.avatar}
-          width="150"
-        />
-        <p className={css.username}>{username}</p>
-        <p className={css.tag}>@{tag}</p>
-        <p className={css.location}>{location}</p>
-      </div>
+    <ProfileWrapper>
+      <Description>
+        <Avatar src={avatar} alt={username + ' avatar'} width="150" />
+        <Username>{username}</Username>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
 
-      <ul className={css.statsList}>{statsList}</ul>
-    </div>
+      <StatsList>{statsList}</StatsList>
+    </ProfileWrapper>
   );
 }
