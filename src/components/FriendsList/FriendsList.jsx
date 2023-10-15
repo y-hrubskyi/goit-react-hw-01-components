@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { FriendItem } from 'components/FriendsList/FriendsItem/FriendsItem';
 import { FriendsListWrapper } from './FriendsList.styled';
 
@@ -15,3 +17,14 @@ export function FriendsList({ friends }) {
     </FriendsListWrapper>
   );
 }
+
+FriendsList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      avatar: PropTypes.string,
+      isOnline: PropTypes.bool.isRequired,
+    })
+  ),
+};

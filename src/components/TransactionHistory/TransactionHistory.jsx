@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
   TBody,
   TBodyData,
@@ -31,3 +33,14 @@ export function TransactionHistory({ transactions }) {
     </TransactionsTable>
   );
 }
+
+TransactionHistory.propTypes = {
+  transactions: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ),
+};
