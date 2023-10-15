@@ -1,4 +1,4 @@
-.statistics {
+.statisticsWrapper {
   background-color: var(--secondary-bg-color);
   box-shadow: 3px 3px 3px 0px var(--secondary-text-color);
   border-radius: 10px;
@@ -13,4 +13,19 @@
   text-transform: uppercase;
   color: var(--secondary-text-color);
   font-weight: 500;
+}
+
+.statsList {
+  display: flex;
+}
+
+.statsItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 48px;
+  padding: 8px;
+
+  border: 1px solid #d4d4d4;
+  background-color: #e9eaee;
 }

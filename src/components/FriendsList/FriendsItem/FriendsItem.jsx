@@ -1,10 +1,10 @@
 import css from './FriendsItem.module.css';
 
 export function FriendItem({ name, avatar, isOnline }) {
-  const bg = isOnline ? 'green' : 'red';
+  const color = isOnline ? 'green' : 'red';
   return (
     <li className={css.friendsItem}>
-      <span className={css.status} style={{ backgroundColor: bg }}></span>
+      <span className={css.status} style={{ backgroundColor: color }}></span>
       <img
         className={css.avatar}
         src={avatar}
