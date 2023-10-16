@@ -1,8 +1,9 @@
+import { getRandomHexColor } from 'helpers/getRandomHexColor';
 import styled from 'styled-components';
 
 export const StatisticsWrapper = styled.section`
-  background-color: var(--secondary-bg-color);
-  box-shadow: 3px 3px 3px 0px var(--secondary-text-color);
+  background-color: ${props => props.theme.colors.secondaryBgColor};
+  box-shadow: 3px 3px 3px 0px ${props => props.theme.colors.secondaryTextColor};
   border-radius: 10px;
   overflow: hidden;
 `;
@@ -13,7 +14,7 @@ export const Title = styled.h2`
 
   text-align: center;
   text-transform: uppercase;
-  color: var(--secondary-text-color);
+  color: ${props => props.theme.colors.secondaryTextColor};
   font-weight: 500;
 `;
 
@@ -29,7 +30,7 @@ export const StatisticsItem = styled.li`
   padding: 8px;
 
   border: 1px solid #d4d4d4;
-  background-color: #e9eaee;
+  background-color: ${() => getRandomHexColor()};
 `;
 
 export const Label = styled.span``;

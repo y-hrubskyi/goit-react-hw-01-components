@@ -10,6 +10,6 @@ export const AppWrapper = styled.div`
   padding-top: 50px;
   padding-bottom: 50px;
 
-  color: var(--dark-text-color);
-  background-color: var(--primary-bg-color);
+  color: ${props => props.theme.colors.darkTextColor};
+  background-color: ${props => props.theme.colors.primaryBgColor};
 `;

@@ -8,8 +8,8 @@ export const FriendsListItem = styled.li`
   min-width: 224px;
   padding: 12px;
 
-  background-color: var(--secondary-bg-color);
-  box-shadow: 2px 2px 2px 0px var(--secondary-text-color);
+  background-color: ${props => props.theme.colors.secondaryBgColor};
+  box-shadow: 2px 2px 2px 0px ${props => props.theme.colors.secondaryTextColor};
   border-radius: 10px;
   overflow: hidden;
 `;
@@ -18,6 +18,7 @@ export const Status = styled.span`
   width: 12px;
   height: 12px;
 
+  background-color: ${props => (props.isOnline ? 'green' : 'red')};
   border-radius: 50%;
 `;
 

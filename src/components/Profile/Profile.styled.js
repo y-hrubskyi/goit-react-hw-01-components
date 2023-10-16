@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const ProfileWrapper = styled.div`
-  background-color: var(--secondary-bg-color);
-  box-shadow: 3px 3px 3px 0px var(--secondary-text-color);
+  background-color: ${props => props.theme.colors.secondaryBgColor};
+  box-shadow: 3px 3px 3px 0px ${props => props.theme.colors.secondaryTextColor};
   border-radius: 10px;
   overflow: hidden;
 `;
@@ -28,11 +28,11 @@ export const Username = styled.p`
 `;
 
 export const Tag = styled.p`
-  color: var(--secondary-text-color);
+  color: ${props => props.theme.colors.secondaryTextColor};
 `;
 
 export const Location = styled.p`
-  color: var(--secondary-text-color);
+  color: ${props => props.theme.colors.secondaryTextColor};
 `;
 
 export const StatsList = styled.ul`
@@ -52,7 +52,7 @@ export const StatsItem = styled.li`
 
 export const Label = styled.span`
   text-transform: capitalize;
-  color: var(--secondary-text-color);
+  color: ${props => props.theme.colors.secondaryTextColor};
 `;
 
 export const Quantity = styled.span`
