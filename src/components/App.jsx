@@ -5,6 +5,7 @@ import { FriendsList } from 'components/FriendsList/FriendsList';
 import { TransactionHistory } from 'components/TransactionHistory/TransactionHistory';
 
 // styled
+import { GlobalStyle } from './GlobalStyle';
 import { AppWrapper } from './App.styled';
 
 // data
@@ -16,6 +17,7 @@ import transactions from 'data/transactions.json';
 export const App = () => {
   return (
     <AppWrapper>
+      <GlobalStyle />
       <Profile
         username={user.username}
         tag={user.tag}

@@ -5,7 +5,7 @@ export const FriendsListItem = styled.li`
   align-items: center;
   gap: 12px;
 
-  min-width: 200px;
+  min-width: 224px;
   padding: 12px;
 
   background-color: var(--secondary-bg-color);

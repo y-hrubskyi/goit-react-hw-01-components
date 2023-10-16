@@ -43,7 +43,7 @@ export const StatsItem = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 64px;
+  min-width: 96px;
   padding: 12px;
 
   border: 1px solid #d4d4d4;

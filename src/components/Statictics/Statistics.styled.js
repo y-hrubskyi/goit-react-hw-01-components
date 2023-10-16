@@ -25,7 +25,7 @@ export const StatisticsItem = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 48px;
+  min-width: 64px;
   padding: 8px;
 
   border: 1px solid #d4d4d4;
