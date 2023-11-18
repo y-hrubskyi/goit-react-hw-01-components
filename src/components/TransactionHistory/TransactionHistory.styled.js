@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const TransactionsTable = styled.table`
   border: 1px solid ${props => props.theme.colors.secondaryTextColor};
-  border-radius: 10px;
+  border-radius: ${p => p.theme.radii.md};
   overflow: hidden;
   box-shadow: 2px 2px 2px 0px ${props => props.theme.colors.secondaryTextColor};
 
@@ -21,11 +21,9 @@ export const THeadRow = styled.tr``;
 
 export const THeadCell = styled.th`
   min-width: 200px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: ${p => p.theme.spacing(2)};
+  padding-bottom: ${p => p.theme.spacing(2)};
 `;
-
-export const TBody = styled.tbody``;
 
 export const TBodyRow = styled.tr`
   &:nth-child(odd) {
@@ -37,8 +35,8 @@ export const TBodyRow = styled.tr`
 `;
 
 export const TBodyData = styled.td`
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: ${p => p.theme.spacing(2)};
+  padding-bottom: ${p => p.theme.spacing(2)};
 
   text-align: center;
   text-transform: capitalize;

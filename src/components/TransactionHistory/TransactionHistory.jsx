@@ -1,12 +1,10 @@
 import PropTypes from 'prop-types';
 
 import {
-  TBody,
   TBodyData,
   TBodyRow,
   THead,
   THeadCell,
-  THeadRow,
   TransactionsTable,
 } from './TransactionHistory.styled';
 
@@ -22,14 +20,14 @@ export function TransactionHistory({ transactions }) {
   return (
     <TransactionsTable>
       <THead>
-        <THeadRow>
+        <tr>
           <THeadCell>Type</THeadCell>
           <THeadCell>Amount</THeadCell>
           <THeadCell>Currency</THeadCell>
-        </THeadRow>
+        </tr>
       </THead>
 
-      <TBody>{tBodyRows}</TBody>
+      <tbody>{tBodyRows}</tbody>
     </TransactionsTable>
   );
 }

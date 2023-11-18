@@ -3,14 +3,14 @@ import styled from 'styled-components';
 export const FriendsListItem = styled.li`
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: ${p => p.theme.spacing(3)};
 
   min-width: 224px;
   padding: 12px;
 
   background-color: ${props => props.theme.colors.secondaryBgColor};
   box-shadow: 2px 2px 2px 0px ${props => props.theme.colors.secondaryTextColor};
-  border-radius: 10px;
+  border-radius: ${p => p.theme.radii.md};
   overflow: hidden;
 `;
 
@@ -23,7 +23,7 @@ export const Status = styled.span`
 `;
 
 export const Avatar = styled.img`
-  border-radius: 5px;
+  border-radius: ${p => p.theme.radii.sm};
 `;
 
 export const Name = styled.p`

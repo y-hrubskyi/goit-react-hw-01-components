@@ -6,7 +6,7 @@ import { TransactionHistory } from 'components/TransactionHistory/TransactionHis
 
 // styled
 import { GlobalStyle } from './GlobalStyle';
-import { AppWrapper } from './App.styled';
+import { Layout } from './App.styled';
 
 // data
 import user from 'data/user.json';
@@ -16,7 +16,7 @@ import transactions from 'data/transactions.json';
 
 export const App = () => {
   return (
-    <AppWrapper>
+    <Layout>
       <GlobalStyle />
       <Profile
         username={user.username}
@@ -28,6 +28,6 @@ export const App = () => {
       <Statictics title="Upload Stats" statistics={statistics} />
       <FriendsList friends={friends} />
       <TransactionHistory transactions={transactions} />
-    </AppWrapper>
+    </Layout>
   );
 };

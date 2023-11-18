@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 
 import {
-  Label,
-  Percentage,
   StatisticsItem,
   StatisticsList,
   StatisticsWrapper,
@@ -12,8 +10,8 @@ import {
 export function Statictics({ title, statistics }) {
   const statisticsList = statistics.map(({ id, label, percentage }) => (
     <StatisticsItem key={id}>
-      <Label>{label}</Label>
-      <Percentage>{percentage}%</Percentage>
+      <span>{label}</span>
+      <span>{percentage}%</span>
     </StatisticsItem>
   ));
 

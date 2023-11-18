@@ -4,5 +4,5 @@ export const FriendsListWrapper = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: ${p => p.theme.spacing(3)};
 `;

@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
-export const AppWrapper = styled.div`
+export const Layout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
-
+  gap: ${p => p.theme.spacing(25)};
   min-height: 100vh;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: ${p => p.theme.spacing(12)};
+  padding-bottom: ${p => p.theme.spacing(12)};
 
-  color: ${props => props.theme.colors.darkTextColor};
-  background-color: ${props => props.theme.colors.primaryBgColor};
+  color: ${p => p.theme.colors.darkTextColor};
+
+  background-color: ${p => p.theme.colors.primaryBgColor};
 `;
